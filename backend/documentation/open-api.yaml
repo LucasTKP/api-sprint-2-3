@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: NoticiasAoMinutoExplorer API
+  description: Esta API permite buscar dados do site https://www.noticiasaominuto.com.br e salvar no S3.
+  version: 1.0.0
+
+servers:
+  - url: https://api.exemplo.com/
+    description: Servidor de produção
+  - url: http://localhost:3000/
+    description: Servidor de desenvolvimento
+
+tags:
+  - name: Notícias ao Minuto
+    description: Operações relacionadas as notícias do site "Notícias ao Minuto".
+paths:
+  /news:
+    get:
+      tags: 
+        - News
+      summary: Lista todas as notícias publicadas no site "Notícias ao Minuto" e salva tudo isso em um arquivo .json na AWS S3.
+      responses:
+        '200':
+          description: Lista de notícias
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/News'
+components:
+  schemas:
+    News:
+      type: object
+      properties:
+        title:
+          type: string
+          example: "'Até em estelionatário estão dispostos a votar', afirma Haddad'"
+        description:
+          type: string
+          example: 'O ministro fez uma avaliação crítica do mundo virtual e a relação com as eleições.'
+        createdAt:
+          type: string
+          example: '2024-09-12 15:45:00'
+        image:
+          type: string
+          example: 'https://media-manager.noticiasaominuto.com.br/640/naom_655738dc6b9ae.jpeg.'
+        link:
+          type: string
+          example: 'https://www.noticiasaominuto.com.br/politica/2199581/ate-em-estelionatario-estao-dispostos-a-votar-afirma-haddad'

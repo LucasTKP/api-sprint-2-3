@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre</title>
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./img/logo2.png" alt="Logo do site">
+        </a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./latest-news.html">Últimas Notícias</a></li>
+          <li><a href="./about.html">Sobre</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Contato</a>
+            <div class="dropdown-content">
+                <a href="./contact.html"><i class="fa-regular fa-envelope"></i>Email</a>
+                <a href="./contact.html"><i class="fa-regular fa-comment-dots"></i>SAC</a>
+            </div>
+        </li>
+        </ul>
+  </nav>
+  </header>
+  
+  <main> 
+    <section class="about">
+      <div class="about-container">
+        <h1>Sobre a MinutoNews</h1>
+        <p>
+          A MinutoNews API é uma API desenvolvida em JavaScript/Node.js com integração em Docker, hospedada na AWS, para extrair informações em formato RSS do site "Notícias ao Minuto". O conteúdo extraído é salvo em arquivos JSON dentro de um bucket S3, e o projeto também inclui uma página HTML para consultar e exibir o conteúdo salvo.
+        </p>
+        <h2>Sobre o site escolhido</h2>
+        <p>
+          "Notícias ao Minuto" é um portal de notícias que oferece uma ampla cobertura de eventos nacionais e internacionais. A API deste projeto irá extrair as principais notícias publicadas no site através do feed RSS do "Notícias ao Minuto".
+        </p>
+        <li><a href="https://www.noticiasaominuto.com.br/" target="_blank">Site "Notícias ao Minuto"</a></li>
+        <li><a href="https://www.noticiasaominuto.com.br/rss" target="_blank">Feed RSS</a></li>
+        <br>
+        <p>
+          Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para nos contactar. Agradecemos por nos visitar e por fazer parte da nossa comunidade!
+        </p>
+      </div>
+    </section>    
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; Uol.Compass. Todos os direitos reservados.</p>
+      <ul class="social-links">
+          <li><a href="https://www.facebook.com/compass.uol/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/compass-uol/mycompany/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.instagram.com/compass.uol/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+
+</body>
+</html>
